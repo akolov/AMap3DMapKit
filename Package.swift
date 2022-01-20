@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-  name: "AMap3DMapKit",
+  name: "AMap3DMapKitNoIDFA",
   platforms: [.iOS(.v13)],
   products: [
     .library(
-      name: "AMap3DMapKitNoIDFA",
-      targets: ["AMap3DMapKitNoIDFA"]
+      name: "AMap3DMapKit",
+      targets: ["AMap3DMapKit"]
     ),
   ],
   dependencies: [
@@ -21,7 +21,7 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "AMap3DMapKitNoIDFA",
+      name: "AMap3DMapKit",
       dependencies: [
         .product(name: "AMapFoundationKit", package: "AMapFoundationKitNoIDFA")
       ],
