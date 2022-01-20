@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AMapFoundationKitNoIDFA",
+        "repositoryURL": "https://github.com/akolov/AMapFoundationKitNoIDFA.git",
+        "state": {
+          "branch": null,
+          "revision": "e564dfa4d7f9698a98af2c81a5187eea5f7e959d",
+          "version": "1.6.9"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
