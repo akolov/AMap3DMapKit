@@ -9,7 +9,7 @@ let package = Package(
   products: [
     .library(
       name: "AMap3DMapKit",
-      targets: ["AMap3DMapKit"]
+      targets: ["MAMapKit"]
     ),
   ],
   dependencies: [
@@ -20,12 +20,6 @@ let package = Package(
     )
   ],
   targets: [
-    .target(
-      name: "AMap3DMapKit",
-      dependencies: [
-        .product(name: "AMapFoundationKit", package: "AMapFoundationKitNoIDFA")
-      ]
-    ),
     .binaryTarget(name: "MAMapKit", path: "Vendor/MAMapKit.xcframework")
   ]
 )
