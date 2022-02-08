@@ -15,6 +15,8 @@ final class AMap3DMapKitTests: XCTestCase {
     AMapServices.shared().apiKey = "123"
     MAMapView.updatePrivacyShow(.didShow, privacyInfo: .didContain)
     MAMapView.updatePrivacyAgree(.didAgree)
+    let map = MAMapView()
+    XCTAssertNil(map)
   }
 
 }

@@ -30,6 +30,7 @@ let package = Package(
         .product(name: "AMapFoundationKit", package: "AMapFoundationKitNoIDFA"),
         "MAMapKit"
       ],
+      resources: [.copy("Vendor/AMap.bundle")],
       linkerSettings: [
         .linkedFramework("CoreTelephony"),
         .linkedFramework("GLKit"),
