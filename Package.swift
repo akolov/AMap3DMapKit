@@ -9,7 +9,7 @@ let package = Package(
   products: [
     .library(
       name: "AMap3DMapKit",
-      targets: ["MAMapKit"]
+      targets: ["AMap3DMapKit"]
     ),
   ],
   dependencies: [
@@ -20,6 +20,27 @@ let package = Package(
     )
   ],
   targets: [
-    .binaryTarget(name: "MAMapKit", path: "Vendor/MAMapKit.xcframework")
+    .binaryTarget(
+      name: "MAMapKit",
+      path: "Vendor/MAMapKit.xcframework"
+    ),
+    .target(
+      name: "AMap3DMapKit",
+      dependencies: [
+        .product(name: "AMapFoundationKit", package: "AMapFoundationKitNoIDFA"),
+        "MAMapKit"
+      ],
+      linkerSettings: [
+        .linkedFramework("CoreTelephony"),
+        .linkedFramework("GLKit"),
+        .linkedFramework("SystemConfiguration"),
+        .linkedLibrary("c++"),
+        .linkedLibrary("z")
+      ]
+    ),
+    .testTarget(
+      name: "AMap3DMapKitTests",
+      dependencies: ["AMap3DMapKit"]
+    )
   ]
 )
