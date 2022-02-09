@@ -17,11 +17,6 @@ let package = Package(
       name: "AMapFoundationKitNoIDFA",
       url: "https://github.com/akolov/AMapFoundationKitNoIDFA.git",
       .upToNextMajor(from: "1.6.0")
-    ),
-    .package(
-      name: "InterposeKit",
-      url: "https://github.com/steipete/InterposeKit.git",
-      .upToNextMajor(from: "0.0.2")
     )
   ],
   targets: [
