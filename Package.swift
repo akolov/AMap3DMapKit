@@ -17,6 +17,11 @@ let package = Package(
       name: "AMapFoundationKitNoIDFA",
       url: "https://github.com/akolov/AMapFoundationKitNoIDFA.git",
       .upToNextMajor(from: "1.6.0")
+    ),
+    .package(
+      name: "InterposeKit",
+      url: "https://github.com/steipete/InterposeKit.git",
+      .upToNextMajor(from: "0.0.2")
     )
   ],
   targets: [
@@ -30,7 +35,7 @@ let package = Package(
         .product(name: "AMapFoundationKit", package: "AMapFoundationKitNoIDFA"),
         "MAMapKit"
       ],
-      resources: [.copy("Vendor/AMap.bundle")],
+      resources: [.process("AMap.bundle")],
       linkerSettings: [
         .linkedFramework("CoreTelephony"),
         .linkedFramework("GLKit"),
@@ -41,7 +46,7 @@ let package = Package(
     ),
     .testTarget(
       name: "AMap3DMapKitTests",
-      dependencies: ["AMap3DMapKit"]
+      dependencies: ["AMap3DMapKit", "InterposeKit"]
     )
   ]
 )

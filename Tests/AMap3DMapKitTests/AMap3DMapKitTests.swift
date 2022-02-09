@@ -7,6 +7,7 @@
 
 @testable import AMap3DMapKit
 import Foundation
+import InterposeKit
 import XCTest
 
 final class AMap3DMapKitTests: XCTestCase {
