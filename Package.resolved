@@ -9,6 +9,15 @@
           "revision": "c509dacc626880e996bfe93113d0d2eba1881e70",
           "version": "1.6.9"
         }
+      },
+      {
+        "package": "InterposeKit",
+        "repositoryURL": "https://github.com/steipete/InterposeKit.git",
+        "state": {
+          "branch": null,
+          "revision": "17853ad69961a5114e25c60c3ce7600feac0eabd",
+          "version": "0.0.2"
+        }
       }
     ]
   },

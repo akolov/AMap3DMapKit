@@ -13,11 +13,12 @@ import XCTest
 final class AMap3DMapKitTests: XCTestCase {
 
   func test() throws {
+    MAMapView.swizzleAMapBundleCalls()
     AMapServices.shared().apiKey = "123"
     MAMapView.updatePrivacyShow(.didShow, privacyInfo: .didContain)
     MAMapView.updatePrivacyAgree(.didAgree)
     let map = MAMapView()
-    XCTAssertNil(map)
+    XCTAssertNotNil(map)
   }
 
 }
