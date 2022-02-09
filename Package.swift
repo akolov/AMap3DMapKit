@@ -41,7 +41,7 @@ let package = Package(
     ),
     .testTarget(
       name: "AMap3DMapKitTests",
-      dependencies: ["AMap3DMapKit", "InterposeKit"]
+      dependencies: ["AMap3DMapKit"]
     )
   ]
 )
